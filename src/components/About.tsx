@@ -20,7 +20,7 @@ const ServiceCard = ({
 }) => {
   return (
     <Tilt
-      className='xs:w-[250px] w-full'
+      className='md:!w-[250px] !w-full'
       options={{ max: 45, scale: 1, speed: 450 }}
     >
       <motion.div
