@@ -43,19 +43,12 @@ const Ball = memo(({ imgUrl }: BallProps) => {
         receiveShadow
         geometry={geometry}
         material={material}
-        scale={2.3}
+        scale={2.2}
       >
-        <icosahedronGeometry args={[1, 1]} />
-        <meshStandardMaterial
-          color='#fff8eb'
-          polygonOffset
-          polygonOffsetFactor={-5}
-          flatShading
-        />
         <Decal
           position={[0, 0, 1]}
           rotation={[2 * Math.PI, 0, 6.25]}
-          scale={1}
+          scale={0.8}
           map={decal}
         />
       </mesh>
@@ -63,40 +56,37 @@ const Ball = memo(({ imgUrl }: BallProps) => {
   )
 })
 
-export const preloadBallTextures: any = (
-  icons: Array<string | { src: string }>
-) => {
+// ✅ only call this once at module load — before rendering
+export const preloadBallTextures = (icons: Array<string | { src: string }>) => {
   icons.forEach((icon) => {
     const url = typeof icon === 'string' ? icon : icon.src
     useTexture.preload(url)
   })
 }
 
-const BallCanvas = memo(({ icon }: { icon: any }) => {
-  return (
-    <Canvas
-      frameloop='demand'
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
-      camera={{ position: [0, 0, 4] }}
+const BallCanvas = memo(({ icon }: { icon: any }) => (
+  <Canvas
+    frameloop='always'
+    dpr={[1, 2]}
+    gl={{ preserveDrawingBuffer: true }}
+    camera={{ position: [0, 0, 4] }}
+  >
+    <Suspense
+      fallback={
+        <Html center>
+          <CanvasLoader />
+        </Html>
+      }
     >
-      <Suspense
-        fallback={
-          <Html center>
-            <CanvasLoader />
-          </Html>
-        }
-      >
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Ball imgUrl={icon} />
-      </Suspense>
-      <Preload all />
-    </Canvas>
-  )
-})
+      <OrbitControls
+        enableZoom={false}
+        maxPolarAngle={Math.PI / 2}
+        minPolarAngle={Math.PI / 2}
+      />
+      <Ball imgUrl={icon} />
+    </Suspense>
+    <Preload all />
+  </Canvas>
+))
 
 export default BallCanvas

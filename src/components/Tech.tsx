@@ -1,10 +1,12 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import { memo } from 'react'
+import { memo, useEffect } from 'react'
 import { SectionWrapper } from '../hoc'
 import { technologies } from '../constants'
+import { preloadBallTextures } from './canvas/Ball'
 
+// dynamic import for lazy loading
 const BallCanvas = dynamic(() => import('./canvas/Ball'), {
   ssr: false,
   loading: () => (
@@ -15,6 +17,10 @@ const BallCanvas = dynamic(() => import('./canvas/Ball'), {
 })
 
 const TechComponent = () => {
+  useEffect(() => {
+    preloadBallTextures(technologies.map((t) => t.icon))
+  }, [])
+
   return (
     <div className='flex flex-row flex-wrap justify-center gap-10'>
       {technologies.map((technology) => (
