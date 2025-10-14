@@ -23,6 +23,7 @@ import {
   tripguide,
   threejs,
   nextjs,
+  nextjs_black,
 } from '../../public/assets'
 
 export const navLinks = [
@@ -201,18 +202,20 @@ const projects = [
       {
         name: 'react',
         color: 'blue-text-gradient',
+        icon: reactjs,
       },
       {
         name: 'mongodb',
         color: 'green-text-gradient',
+        icon: mongodb,
       },
       {
-        name: 'tailwind',
+        name: 'tailwindcss',
         color: 'pink-text-gradient',
+        icon: tailwind,
       },
     ],
     image: carrent,
-    source_code_link: 'https://github.com/',
   },
   {
     name: 'Job IT',
@@ -220,20 +223,22 @@ const projects = [
       'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
     tags: [
       {
-        name: 'react',
+        name: 'next.js',
         color: 'blue-text-gradient',
+        icon: nextjs_black,
       },
       {
-        name: 'restapi',
+        name: 'node.js',
         color: 'green-text-gradient',
+        icon: nodejs,
       },
       {
-        name: 'scss',
+        name: 'tailwindcss',
         color: 'pink-text-gradient',
+        icon: tailwind,
       },
     ],
     image: jobit,
-    source_code_link: 'https://github.com/',
   },
   {
     name: 'Trip Guide',
@@ -243,18 +248,20 @@ const projects = [
       {
         name: 'nextjs',
         color: 'blue-text-gradient',
+        icon: nextjs_black,
       },
       {
-        name: 'supabase',
+        name: 'typescript',
         color: 'green-text-gradient',
+        icon: typescript,
       },
       {
-        name: 'css',
+        name: 'node.js',
         color: 'pink-text-gradient',
+        icon: nodejs,
       },
     ],
     image: tripguide,
-    source_code_link: 'https://github.com/',
   },
 ]
 
