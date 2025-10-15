@@ -25,7 +25,13 @@ const Navbar = () => {
           }}
           className='flex items-center gap-2'
         >
-          <Image src={logo} alt='logo' className='w-9 h-9 object-contain' />
+          <div className='w-10 h-10 overflow-hidden relative rounded-full'>
+            <Image
+              src={logo}
+              alt='logo'
+              className='w-full h-full object-contain'
+            />
+          </div>
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>
             Lasha-Giorgi&nbsp;
             <span className='sm:block hidden'>&nbsp;| Magaldadze</span>

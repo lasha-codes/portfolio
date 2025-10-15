@@ -6,7 +6,6 @@ import { SectionWrapper } from '../hoc'
 import { technologies } from '../constants'
 import { preloadBallTextures } from './canvas/Ball'
 
-// dynamic import for lazy loading
 const BallCanvas = dynamic(() => import('./canvas/Ball'), {
   ssr: false,
   loading: () => (

@@ -20,9 +20,48 @@ const Contact = () => {
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {}
+  ) => {
+    const { name, value } = e.target
 
-  const handleSubmit = (e: React.FormEvent) => {}
+    setForm({ ...form, [name]: value })
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_KEY!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_KEY!,
+        {
+          from_name: form.name,
+          to_name: 'Lasha',
+          from_email: form.email,
+          to_email: 'lashagiorgi420@gmail.com',
+          message: form.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_API_KEY!
+      )
+      .then(
+        () => {
+          setLoading(false)
+          alert('Thank you. i will get back to you as soon as possible.')
+
+          setForm({
+            name: '',
+            email: '',
+            message: '',
+          })
+        },
+        (error) => {
+          setLoading(false)
+          console.log(error)
+
+          alert('Something went wrong.')
+        }
+      )
+  }
 
   return (
     <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
@@ -73,6 +112,7 @@ const Contact = () => {
           </label>
 
           <button
+            disabled={loading}
             type='submit'
             className='bg-tertiary !py-3 !px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl cursor-pointer hover:shadow-none transition-all duration-300'
           >

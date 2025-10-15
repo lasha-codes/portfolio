@@ -7,8 +7,10 @@ import Image from 'next/image'
 import { SectionWrapper } from '@/hoc'
 import { projects } from '@/constants'
 import { fadeIn, textVariant } from '@/utils/motion'
+import { link as linkIcon } from '../../public/assets'
+import Link from 'next/link'
 
-const ProjectCard = ({ index, name, description, tags, image }: any) => {
+const ProjectCard = ({ index, name, description, tags, image, link }: any) => {
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
       <Tilt
@@ -25,6 +27,20 @@ const ProjectCard = ({ index, name, description, tags, image }: any) => {
             alt={name}
             className='w-full h-full object-cover rounded-2xl'
           />
+
+          <Link
+            href={link}
+            target='_blank'
+            className='absolute top-3.5 right-3.5 !p-1 rounded-full bg-white flex items-center justify-center hover:bg-[#ffffff96] transition-all duration-200'
+          >
+            <Image
+              src={linkIcon}
+              alt='link'
+              width={30}
+              height={30}
+              className='object-contain'
+            />
+          </Link>
         </div>
 
         <div className='!mt-5'>

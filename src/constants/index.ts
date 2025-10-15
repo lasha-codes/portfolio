@@ -12,18 +12,18 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
-  nextjs,
+  express,
   nextjs_black,
+  prisma,
+  movix,
+  tapinfy,
+  safekit,
+  movixPreview,
+  tapinfyPreview,
+  safekitPreview,
+  redis,
+  stripe,
 } from '../../public/assets'
 
 export const navLinks = [
@@ -77,6 +77,7 @@ const technologies = [
     name: 'React JS',
     icon: reactjs,
   },
+  { name: 'Next JS', icon: nextjs_black },
   {
     name: 'Redux Toolkit',
     icon: redux,
@@ -90,78 +91,70 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: 'MongoDB',
-    icon: mongodb,
+    name: 'Express JS',
+    icon: express,
   },
   {
-    name: 'Three JS',
-    icon: threejs,
+    name: 'prisma',
+    icon: prisma,
+  },
+  {
+    name: 'MongoDB',
+    icon: mongodb,
   },
   {
     name: 'git',
     icon: git,
   },
-  {
-    name: 'figma',
-    icon: figma,
-  },
+
   {
     name: 'docker',
     icon: docker,
+  },
+  {
+    name: 'stripe',
+    icon: stripe,
   },
 ]
 
 const experiences = [
   {
-    title: 'React.js Developer',
-    company_name: 'Starbucks',
-    icon: starbucks,
-    iconBg: '#383E56',
-    date: 'March 2020 - April 2021',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-  {
-    title: 'React Native Developer',
-    company_name: 'Tesla',
-    icon: tesla,
-    iconBg: '#E6DEDD',
+    title: 'Next.js Developer',
+    company_name: 'Safekit',
+    icon: safekit,
+    iconBg: 'white',
     date: 'Jan 2021 - Feb 2022',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Built responsive, high-performance websites using Next.js and TypeScript.',
+      'Integrated secure authentication and authorization features using JWT and middleware.',
+      'Worked closely with the backend team to develop and optimize RESTful APIs.',
+      'Improved build times and SEO performance through advanced Next.js optimization techniques.',
     ],
   },
   {
-    title: 'Web Developer',
-    company_name: 'Shopify',
-    icon: shopify,
+    title: 'Full-Stack Developer',
+    company_name: 'Movix.ge',
+    icon: movix,
     iconBg: '#383E56',
-    date: 'Jan 2022 - Jan 2023',
+    date: 'March 2022 - April 2023',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Developed a dynamic movie platform using React.js and Node.js.',
+      'Optimized video streaming performance and reduced API response time by 30%.',
+      'Collaborated with UI/UX designers to improve the site’s usability and accessibility.',
+      'Maintained database systems using MongoDB and implemented efficient data caching strategies.',
     ],
   },
   {
-    title: 'Full stack Developer',
-    company_name: 'Meta',
-    icon: meta,
-    iconBg: '#E6DEDD',
-    date: 'Jan 2023 - Present',
+    title: 'Full-Stack Developer',
+    company_name: 'Tapinfy',
+    icon: tapinfy,
+    iconBg: '#050816',
+    date: 'Jan 2024 - July 2024',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Developed SaaS dashboards and real-time analytics tools using Next.js and Tailwind CSS.',
+      'Implemented CI/CD pipelines with GitHub Actions for seamless deployments.',
+      'Integrated third-party APIs and payment gateways to extend product functionality.',
+      'Led performance audits, improving page load speed and Core Web Vitals scores.',
     ],
   },
 ]
@@ -195,19 +188,35 @@ const testimonials = [
 
 const projects = [
   {
-    name: 'Car Rent',
+    name: 'Movix.ge',
+    link: 'https://movix.ge',
     description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+      'Web-based platform that allows users to browse, stream, and manage movies and TV shows from various providers, providing a convenient and efficient solution for entertainment needs.',
     tags: [
+      {
+        name: 'typescript',
+        color: 'blue-text-gradient',
+        icon: typescript,
+      },
       {
         name: 'react',
         color: 'blue-text-gradient',
         icon: reactjs,
       },
       {
-        name: 'mongodb',
+        name: 'express',
         color: 'green-text-gradient',
-        icon: mongodb,
+        icon: express,
+      },
+      {
+        name: 'redis',
+        color: 'pink-text-gradient',
+        icon: redis,
+      },
+      {
+        name: 'prisma',
+        color: 'green-text-gradient',
+        icon: prisma,
       },
       {
         name: 'tailwindcss',
@@ -215,53 +224,82 @@ const projects = [
         icon: tailwind,
       },
     ],
-    image: carrent,
+    image: movixPreview,
   },
   {
-    name: 'Job IT',
+    name: 'Tapinfy',
+    link: 'https://tapinfy.io',
     description:
-      'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+      'Web application that enables users to manage invoices, track vehicle sales, and organize dealership operations efficiently for all types of automotive businesses.',
     tags: [
+      {
+        name: 'typescript',
+        color: 'blue-text-gradient',
+        icon: typescript,
+      },
       {
         name: 'next.js',
         color: 'blue-text-gradient',
         icon: nextjs_black,
       },
       {
-        name: 'node.js',
+        name: 'express',
         color: 'green-text-gradient',
-        icon: nodejs,
+        icon: express,
       },
+      { name: 'redis', color: 'pink-text-gradient', icon: redis },
+      { name: 'prisma', color: 'blue-text-gradient', icon: prisma },
       {
         name: 'tailwindcss',
         color: 'pink-text-gradient',
         icon: tailwind,
       },
+      {
+        name: 'stripe',
+        color: 'pink-text-gradient',
+        icon: stripe,
+      },
     ],
-    image: jobit,
+    image: tapinfyPreview,
   },
   {
-    name: 'Trip Guide',
+    name: 'Safekit',
+    link: 'https://safekit.nl',
     description:
-      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+      'Web application that enables users to browse medical supplies, purchase bandages and first-aid items, and manage orders conveniently for all health and safety needs.',
     tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-        icon: nextjs_black,
-      },
       {
         name: 'typescript',
         color: 'green-text-gradient',
         icon: typescript,
       },
       {
-        name: 'node.js',
+        name: 'nextjs',
+        color: 'blue-text-gradient',
+        icon: nextjs_black,
+      },
+      {
+        name: 'redis',
+        color: 'green-text-gradient',
+        icon: redis,
+      },
+      {
+        name: 'prisma',
+        color: 'blue-text-gradient',
+        icon: prisma,
+      },
+      {
+        name: 'tailwindcss',
         color: 'pink-text-gradient',
-        icon: nodejs,
+        icon: tailwind,
+      },
+      {
+        name: 'stripe',
+        color: 'pink-text-gradient',
+        icon: stripe,
       },
     ],
-    image: tripguide,
+    image: safekitPreview,
   },
 ]
 

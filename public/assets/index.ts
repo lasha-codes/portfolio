@@ -1,4 +1,4 @@
-import logo from './logo.svg'
+import logo from './logo.png'
 import backend from './backend.png'
 import creator from './creator.png'
 import mobile from './mobile.png'
@@ -15,6 +15,7 @@ import html from './tech/html.png'
 import javascript from './tech/javascript.png'
 import mongodb from './tech/mongodb.png'
 import nodejs from './tech/nodejs.png'
+import express from './tech/express.png'
 import reactjs from './tech/reactjs.png'
 import redux from './tech/redux.png'
 import tailwind from './tech/tailwind.png'
@@ -22,15 +23,26 @@ import typescript from './tech/typescript.png'
 import nextjs from './tech/nextjs.png'
 import nextjs_black from './tech/nextjs-black.png'
 import threejs from './tech/threejs.svg'
+import prisma from './tech/prisma.png'
+import redis from './tech/redis.png'
+import stripe from './tech/stripe.png'
 
 import meta from './company/meta.png'
 import shopify from './company/shopify.png'
 import starbucks from './company/starbucks.png'
 import tesla from './company/tesla.png'
+import movix from './company/movix.png'
+import tapinfy from './company/tapinfy.svg'
+import safekit from './company/safekit.webp'
 
 import carrent from './carrent.png'
 import jobit from './jobit.png'
 import tripguide from './tripguide.png'
+import movixPreview from './movix.png'
+import tapinfyPreview from './tapinfy.png'
+import safekitPreview from './safekit.png'
+
+import link from '../assets/link.png'
 
 export {
   logo,
@@ -50,12 +62,16 @@ export {
   javascript,
   mongodb,
   nodejs,
+  express,
   nextjs_black,
   reactjs,
   redux,
   tailwind,
   typescript,
   threejs,
+  prisma,
+  redis,
+  stripe,
   meta,
   shopify,
   starbucks,
@@ -63,4 +79,11 @@ export {
   carrent,
   jobit,
   tripguide,
+  movix,
+  safekit,
+  movixPreview,
+  tapinfy,
+  tapinfyPreview,
+  safekitPreview,
+  link,
 }
