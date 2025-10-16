@@ -12,9 +12,6 @@ export const metadata: Metadata = {
   title: 'Lasha-Giorgi | Portfolio',
   description:
     'On this protfolio you will be learning about me and what i can do.',
-  icons: {
-    icon: '/assets/logo.png',
-  },
 }
 
 export default function RootLayout({

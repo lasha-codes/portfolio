@@ -1,48 +1,37 @@
-import logo from './logo.png'
-import backend from './backend.png'
-import creator from './creator.png'
-import mobile from './mobile.png'
-import web from './web.png'
-import github from './github.png'
+import logo from './logo.webp'
+import backend from './backend.webp'
+import creator from './creator.webp'
+import mobile from './mobile.webp'
+import web from './web.webp'
 import menu from './menu.svg'
 import close from './close.svg'
 
-import css from './tech/css.png'
-import docker from './tech/docker.png'
-import figma from './tech/figma.png'
-import git from './tech/git.png'
-import html from './tech/html.png'
-import javascript from './tech/javascript.png'
-import mongodb from './tech/mongodb.png'
-import nodejs from './tech/nodejs.png'
-import express from './tech/express.png'
-import reactjs from './tech/reactjs.png'
-import redux from './tech/redux.png'
-import tailwind from './tech/tailwind.png'
-import typescript from './tech/typescript.png'
-import nextjs from './tech/nextjs.png'
-import nextjs_black from './tech/nextjs-black.png'
-import threejs from './tech/threejs.svg'
-import prisma from './tech/prisma.png'
-import redis from './tech/redis.png'
-import stripe from './tech/stripe.png'
+import css from './tech/css.webp'
+import docker from './tech/docker.webp'
+import git from './tech/git.webp'
+import html from './tech/html.webp'
+import javascript from './tech/javascript.webp'
+import mongodb from './tech/mongodb.webp'
+import nodejs from './tech/nodejs.webp'
+import express from './tech/express.webp'
+import reactjs from './tech/reactjs.webp'
+import redux from './tech/redux.webp'
+import tailwind from './tech/tailwind.webp'
+import typescript from './tech/typescript.webp'
+import nextjs_black from './tech/nextjs-black.webp'
+import prisma from './tech/prisma.webp'
+import redis from './tech/redis.webp'
+import stripe from './tech/stripe.webp'
 
-import meta from './company/meta.png'
-import shopify from './company/shopify.png'
-import starbucks from './company/starbucks.png'
-import tesla from './company/tesla.png'
-import movix from './company/movix.png'
+import movix from './company/movix.webp'
 import tapinfy from './company/tapinfy.svg'
 import safekit from './company/safekit.webp'
 
-import carrent from './carrent.png'
-import jobit from './jobit.png'
-import tripguide from './tripguide.png'
-import movixPreview from './movix.png'
-import tapinfyPreview from './tapinfy.png'
-import safekitPreview from './safekit.png'
+import movixPreview from './movix.webp'
+import tapinfyPreview from './tapinfy.webp'
+import safekitPreview from './safekit.webp'
 
-import link from '../assets/link.png'
+import link from '../assets/link.webp'
 
 export {
   logo,
@@ -50,13 +39,10 @@ export {
   creator,
   mobile,
   web,
-  github,
   menu,
   close,
   css,
   docker,
-  figma,
-  nextjs,
   git,
   html,
   javascript,
@@ -68,17 +54,9 @@ export {
   redux,
   tailwind,
   typescript,
-  threejs,
   prisma,
   redis,
   stripe,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
   movix,
   safekit,
   movixPreview,

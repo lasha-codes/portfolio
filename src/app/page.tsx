@@ -6,7 +6,6 @@ import {
   Navbar,
   Tech,
   Works,
-  StarsCanvas,
 } from '@/components'
 
 const Home = () => {
@@ -23,7 +22,6 @@ const Home = () => {
 
       <div className='relative z-0'>
         <Contact />
-        <StarsCanvas />
       </div>
     </div>
   )

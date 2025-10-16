@@ -34,7 +34,7 @@ const Ball = memo(({ imgUrl }: BallProps) => {
   )
 
   return (
-    <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+    <Float speed={1.25} rotationIntensity={0.7} floatIntensity={1.5}>
       <ambientLight intensity={0.5} />
       <directionalLight position={[0, 0, 0.1]} />
 
@@ -43,7 +43,7 @@ const Ball = memo(({ imgUrl }: BallProps) => {
         receiveShadow
         geometry={geometry}
         material={material}
-        scale={2.2}
+        scale={2.2} // kept your design
       >
         <Decal
           position={[0, 0, 1]}
@@ -56,7 +56,6 @@ const Ball = memo(({ imgUrl }: BallProps) => {
   )
 })
 
-// ✅ only call this once at module load — before rendering
 export const preloadBallTextures = (icons: Array<string | { src: string }>) => {
   icons.forEach((icon) => {
     const url = typeof icon === 'string' ? icon : icon.src
@@ -67,8 +66,13 @@ export const preloadBallTextures = (icons: Array<string | { src: string }>) => {
 const BallCanvas = memo(({ icon }: { icon: any }) => (
   <Canvas
     frameloop='always'
-    dpr={[1, 2]}
-    gl={{ preserveDrawingBuffer: true }}
+    dpr={0.9}
+    gl={{
+      antialias: false,
+      preserveDrawingBuffer: true,
+      powerPreference: 'high-performance',
+      precision: 'lowp',
+    }}
     camera={{ position: [0, 0, 4] }}
   >
     <Suspense

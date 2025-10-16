@@ -210,7 +210,7 @@
 
   --breakpoint-xs: 450px;
 
-  --bg-hero-pattern: url('../../public/assets/herobg.png');
+  --bg-hero-pattern: url('../../public/assets/herobg.webp');
 }
 
 .bg-hero-pattern {
