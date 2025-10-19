@@ -21,9 +21,10 @@ import {
   safekit,
   movixPreview,
   tapinfyPreview,
-  safekitPreview,
+  melonaiPreview,
   redis,
   stripe,
+  openai,
 } from '../../public/assets'
 
 export const navLinks = [
@@ -191,7 +192,7 @@ const projects = [
     name: 'Movix.ge',
     link: 'https://movix.ge',
     description:
-      'Web-based platform that allows users to browse, stream, and manage movies and TV shows from various providers, providing a convenient and efficient solution for entertainment needs.',
+      'Web platform that lets users stream, browse, and manage movies and shows from multiple providers, offering a simple and efficient entertainment experience.',
     tags: [
       {
         name: 'typescript',
@@ -225,6 +226,40 @@ const projects = [
       },
     ],
     image: movixPreview,
+  },
+  {
+    name: 'Melon.AI',
+    link: 'https://melonai.vercel.app',
+    description:
+      'AI-powered chatbot that streamlines communication, automates responses, and enhances customer interaction for all types of online platforms.',
+    tags: [
+      {
+        name: 'typescript',
+        color: 'green-text-gradient',
+        icon: typescript,
+      },
+      {
+        name: 'nextjs',
+        color: 'blue-text-gradient',
+        icon: nextjs_black,
+      },
+      {
+        name: 'openai',
+        color: 'green-text-gradient',
+        icon: openai,
+      },
+      {
+        name: 'prisma',
+        color: 'blue-text-gradient',
+        icon: prisma,
+      },
+      {
+        name: 'tailwindcss',
+        color: 'pink-text-gradient',
+        icon: tailwind,
+      },
+    ],
+    image: melonaiPreview,
   },
   {
     name: 'Tapinfy',
@@ -261,45 +296,6 @@ const projects = [
       },
     ],
     image: tapinfyPreview,
-  },
-  {
-    name: 'Safekit',
-    link: 'https://safekit.nl',
-    description:
-      'Web application that enables users to browse medical supplies, purchase bandages and first-aid items, and manage orders conveniently for all health and safety needs.',
-    tags: [
-      {
-        name: 'typescript',
-        color: 'green-text-gradient',
-        icon: typescript,
-      },
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-        icon: nextjs_black,
-      },
-      {
-        name: 'redis',
-        color: 'green-text-gradient',
-        icon: redis,
-      },
-      {
-        name: 'prisma',
-        color: 'blue-text-gradient',
-        icon: prisma,
-      },
-      {
-        name: 'tailwindcss',
-        color: 'pink-text-gradient',
-        icon: tailwind,
-      },
-      {
-        name: 'stripe',
-        color: 'pink-text-gradient',
-        icon: stripe,
-      },
-    ],
-    image: safekitPreview,
   },
 ]
 

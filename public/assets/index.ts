@@ -22,6 +22,7 @@ import nextjs_black from './tech/nextjs-black.webp'
 import prisma from './tech/prisma.webp'
 import redis from './tech/redis.webp'
 import stripe from './tech/stripe.webp'
+import openai from './tech/openai.webp'
 
 import movix from './company/movix.webp'
 import tapinfy from './company/tapinfy.svg'
@@ -29,7 +30,7 @@ import safekit from './company/safekit.webp'
 
 import movixPreview from './movix.webp'
 import tapinfyPreview from './tapinfy.webp'
-import safekitPreview from './safekit.webp'
+import melonaiPreview from './melonai.webp'
 
 import link from '../assets/link.webp'
 
@@ -62,6 +63,7 @@ export {
   movixPreview,
   tapinfy,
   tapinfyPreview,
-  safekitPreview,
   link,
+  melonaiPreview,
+  openai,
 }
